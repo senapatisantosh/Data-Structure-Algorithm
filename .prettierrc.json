@@ -1,0 +1,28 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "singleQuote": true,
+    "semi": true,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all",
+    "bracketSameLine": true,
+    "printWidth": 200,
+    "endOfLine": "auto",
+    "overrides": [
+        {
+            "files": "*.ts",
+            "options": {
+                "parser": "typescript",
+                "singleQuote": true,
+                "trailingComma": "all",
+                "arrowParens": "avoid",
+                "bracketSpacing": true,
+                "semi": true,
+                "useTabs": false,
+                "tabWidth": 4,
+                "printWidth": 200
+            }
+        }
+    ]
+}
