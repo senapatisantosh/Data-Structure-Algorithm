@@ -11,6 +11,7 @@
         "test:watch": "jest --watch",
         "lint": "eslint",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+        "format:check": "prettier --ignore-path .gitignore --check .",
         "prepare": "husky install"
     },
     "author": "",
