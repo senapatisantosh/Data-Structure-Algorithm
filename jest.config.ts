@@ -6,7 +6,7 @@ const config: Config = {
     verbose: true,
     testMatch: ['<rootDir>/test/**/*.test.ts'],
     testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-    coverageReporters: ['cobertura', 'lcov'],
+    coverageReporters: ['json-summary', 'cobertura', 'lcov'],
 };
 
 export default config;
