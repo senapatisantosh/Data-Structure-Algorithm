@@ -7,7 +7,7 @@
         "clean": "rimraf dist",
         "prebuild": "npm run clean",
         "build": "tsc",
-        "test": "jest --coverage && jest-coverage-badges --input './coverage' --output './badges'",
+        "test": "jest --coverage",
         "test:watch": "jest --watch",
         "lint": "eslint",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
