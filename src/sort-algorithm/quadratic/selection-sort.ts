@@ -7,9 +7,7 @@ export const SelectionSort = (array: number[]) => {
                 k = j;
             }
         }
-        const temp = array[i];
-        array[i] = array[k];
-        array[k] = temp;
+        [array[i], array[k]] = [array[k], array[i]];
     }
     return array;
 };
@@ -23,9 +21,7 @@ export const SelectionSortGeneric = <T>(array: T[], compareFn: (a: T, b: T) => b
                 k = j;
             }
         }
-        const temp = array[i];
-        array[i] = array[k];
-        array[k] = temp;
+        [array[i], array[k]] = [array[k], array[i]];
     }
     return array;
 };

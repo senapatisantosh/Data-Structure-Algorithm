@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { BubbleSort, BubbleSortGeneric } from '../../src/sort-algorithm/bubble-sort';
+import { BubbleSort, BubbleSortGeneric } from '../../../src/sort-algorithm/quadratic/bubble-sort';
 
 describe('Bubble Sort Algorithm', () => {
     describe('Simple Bubble Sort Algorithm', () => {
