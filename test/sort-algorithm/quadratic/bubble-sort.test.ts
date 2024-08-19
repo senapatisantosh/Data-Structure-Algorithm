@@ -47,7 +47,7 @@ describe('Bubble Sort Algorithm', () => {
             const expectedOutput = [0, 1, 2, 3, 4, 5, 6, 7];
 
             // Act
-            const actualOutput = BubbleSortGeneric<number>(input, (curr, next) => curr > next);
+            const actualOutput = BubbleSortGeneric<number>(input, (curr, next) => curr - next);
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
@@ -59,7 +59,7 @@ describe('Bubble Sort Algorithm', () => {
             const expectedOutput = ['apple', 'banana', 'orange', 'pear'];
 
             // Act
-            const actualOutput = BubbleSortGeneric<string>(input, (curr, next) => curr > next);
+            const actualOutput = BubbleSortGeneric<string>(input, (curr, next) => curr.localeCompare(next));
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
@@ -83,7 +83,7 @@ describe('Bubble Sort Algorithm', () => {
             ];
 
             // Act
-            const actualOutput = BubbleSortGeneric<Product>(input, (curr, next) => curr.price > next.price);
+            const actualOutput = BubbleSortGeneric<Product>(input, (curr, next) => curr.price - next.price);
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);

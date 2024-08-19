@@ -12,12 +12,12 @@ export const SelectionSort = (array: number[]) => {
     return array;
 };
 
-export const SelectionSortGeneric = <T>(array: T[], compareFn: (a: T, b: T) => boolean): T[] => {
+export const SelectionSortGeneric = <T>(array: T[], compareFn: (a: T, b: T) => number): T[] => {
     const lengthOfArray = array.length;
     for (let i = 0; i < lengthOfArray - 1; i++) {
         let k = i;
         for (let j = i; j < lengthOfArray; j++) {
-            if (compareFn(array[j], array[k])) {
+            if (compareFn(array[j], array[k]) > 0) {
                 k = j;
             }
         }

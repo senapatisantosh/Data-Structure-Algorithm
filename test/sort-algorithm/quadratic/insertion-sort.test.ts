@@ -47,7 +47,7 @@ describe('Insert Sort Algorithm', () => {
             const expectedOutput = [0, 1, 2, 3, 4, 5, 6, 7];
 
             // Act
-            const actualOutput = InsertionSortGeneric<number>(input, (curr, next) => curr > next);
+            const actualOutput = InsertionSortGeneric<number>(input, (curr, next) => curr - next);
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
@@ -59,7 +59,7 @@ describe('Insert Sort Algorithm', () => {
             const expectedOutput = ['apple', 'banana', 'orange', 'pear'];
 
             // Act
-            const actualOutput = InsertionSortGeneric<string>(input, (curr, next) => curr > next);
+            const actualOutput = InsertionSortGeneric<string>(input, (curr, next) => curr.localeCompare(next));
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
@@ -83,7 +83,7 @@ describe('Insert Sort Algorithm', () => {
             ];
 
             // Act
-            const actualOutput = InsertionSortGeneric<Product>(input, (curr, next) => curr.price > next.price);
+            const actualOutput = InsertionSortGeneric<Product>(input, (curr, next) => curr.price - next.price);
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
