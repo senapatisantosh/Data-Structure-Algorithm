@@ -5,9 +5,7 @@ export const BubbleSort = (array: number[]) => {
         flag = true;
         for (let j = 0; j < lengthOfArray - i; j++) {
             if (array[j] > array[j + 1]) {
-                const temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                [array[j], array[j + 1]] = [array[j + 1], array[j]];
                 flag = false;
             }
         }
@@ -25,9 +23,7 @@ export const BubbleSortGeneric = <T>(array: T[], compareFn: (a: T, b: T) => bool
         flag = true;
         for (let j = 0; j < lengthOfArray - i - 1; j++) {
             if (compareFn(array[j], array[j + 1])) {
-                const temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                [array[j], array[j + 1]] = [array[j + 1], array[j]];
                 flag = false;
             }
         }
