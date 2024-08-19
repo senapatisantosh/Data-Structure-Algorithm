@@ -47,7 +47,7 @@ describe('Selection Sort Algorithm', () => {
             const expectedOutput = [0, 1, 2, 3, 4, 5, 6, 7];
 
             // Act
-            const actualOutput = SelectionSortGeneric<number>(input, (curr, next) => curr < next);
+            const actualOutput = SelectionSortGeneric<number>(input, (curr, next) => next - curr);
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
@@ -59,7 +59,7 @@ describe('Selection Sort Algorithm', () => {
             const expectedOutput = ['apple', 'banana', 'orange', 'pear'];
 
             // Act
-            const actualOutput = SelectionSortGeneric<string>(input, (curr, next) => curr < next);
+            const actualOutput = SelectionSortGeneric<string>(input, (curr, next) => next.localeCompare(curr));
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
@@ -83,7 +83,7 @@ describe('Selection Sort Algorithm', () => {
             ];
 
             // Act
-            const actualOutput = SelectionSortGeneric<Product>(input, (curr, next) => curr.price < next.price);
+            const actualOutput = SelectionSortGeneric<Product>(input, (curr, next) => next.price - curr.price);
 
             // Assert
             expect(actualOutput).toEqual(expectedOutput);
